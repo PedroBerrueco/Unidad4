@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
+    <title>PedroBerrueco_Tailwind</title>
+</head>
+
+<body>    
+    <div class="container-fluid mx-1 mt-1"> 
+        <nav class="flex items-center justify-between flex-wrap bg-gray-900 p-4">
+          <div class="sm:hidden">
+            <button class="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white">
+              <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
+            </button>
+          </div>
+          <div class="w-full flex-grow lg:flex lg:w-auto sm:initial-scale">
+            <div class="text-sm ">
+              <a href="#" class="text-gray-300 block mt-4 sm:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4 ">
+                Inicio
+              </a>
+              <a href="#carrusel" class="text-gray-300 block mt-4 sm:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4 ">
+                Carrusel
+              </a>
+              <a href="#formulario" class="text-gray-300 block mt-4 sm:inline-block lg:mt-0 text-teal-200 hover:text-white ">
+                Formulario
+              </a>
+            </div>
+          </div>
+        </nav>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-5 mx-auto">
+        <div id="carouselExampleControls" class="carousel slide relative m-2" data-bs-ride="carousel">
+            <div class="carousel-inner relative w-full overflow-hidden">
+              <div class="carousel-item active relative float-left w-full">
+                <img
+                  src="https://cdn.pixabay.com/photo/2016/08/02/11/13/graphic-design-studio-1563080_640.jpg"
+                  class="block w-full"
+                  alt="pc"
+                />
+              </div>
+              <div class="carousel-item relative float-left w-full">
+                <img
+                  src="https://cdn.pixabay.com/photo/2017/03/23/09/34/artificial-intelligence-2167835_960_720.jpg"
+                  class="block w-full"
+                  alt="codigo"
+                />
+              </div>
+              <div class="carousel-item relative float-left w-full">
+                <img
+                  src="https://cdn.pixabay.com/photo/2016/06/09/17/45/hacker-1446193_960_720.jpg"
+                  class="block w-full"
+                  alt="hacker"
+                />
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline left-0"
+              type="button"
+              data-bs-target="#carouselExampleControls"
+              data-bs-slide="prev"
+            >
+              <span class="carousel-control-prev-icon inline-block bg-no-repeat" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline right-0"
+              type="button"
+              data-bs-target="#carouselExampleControls"
+              data-bs-slide="next"
+            >
+              <span class="carousel-control-next-icon inline-block bg-no-repeat" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <div class="m-5">
+            <form class="form my-10">
+                <div class="grid grid-cols-1 m-6">
+                    <div class="text-center"><label for="email align-items-center">Email</label></div>
+                    <div class="border"><input type="text align-items-center" name="email"></div>
+                </div>
+                <div class="grid grid-cols-1 m-6">
+                    <div class="text-center"><label for="password">Contraseña</label></div>                    
+                    <div class="border"><input type="password" name="contraseña"></div>
+                </div>
+                <div class="grid grid-cols-3 my-6">
+                    <input class="h-4 w-5/12" type="checkbox" name="checkbox">
+                    <label class="" for="checkbox">Recordar contraseña</label>
+                </div>
+                <div class="grid grid-cols-1">
+                    <button class="mx-auto p-10 bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 w-3/12 border border-blue-700 rounded">
+                        <input type="submit" value="Enviar">
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+          }
+        }
+      }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
+</body>
+</html>
